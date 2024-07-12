@@ -1,0 +1,22 @@
+services:
+  node-exporter:
+    pid: host
+    network_mode: host
+    volumes:
+      - '/:/host:rw,rslave'
+    image: 'bitnami/node-exporter'
+
+  prometheus:
+    container_name: prometheus
+    ports:
+      - '9090:9090'
+    volumes:
+      - '/home/synnefo/Nithin/Docker:/etc/prometheus/'
+    image: 'bitnami/prometheus'
+
+  grafana:
+    container_name: grafana
+    ports:
+      - '3000:3000'
+    image: 'grafana/grafana'
+
