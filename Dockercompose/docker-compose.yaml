@@ -1,0 +1,8 @@
+version: '2'
+services:
+  jogo:  # name of the service
+    image: nginx:latest
+    container_name: jogo  # changed to match your request
+    ports:
+      - "8080:80"  # mapping host port 8080 to container port 80
+

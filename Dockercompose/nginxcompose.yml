@@ -1,0 +1,7 @@
+version: '2'
+services: 
+  jogo:  # name of the service
+    image: nginx:latest
+    container_name: jogo  # container name
+    ports:
+      - "8080:80" 

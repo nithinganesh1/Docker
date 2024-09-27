@@ -1,0 +1,7 @@
+FROM almalinux
+RUN dnf update -y
+RUN dnf install httpd -y
+WORKDIR "/usr/local/apache2"
+COPY ./webfiles/email /var/www/html/
+CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
+EXPOSE 80

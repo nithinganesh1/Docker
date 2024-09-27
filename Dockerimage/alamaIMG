@@ -1,0 +1,5 @@
+FROM almalinux
+RUN useradd -s /bin/bash -h /home/jogo jogo
+WORKDIR /home/jogo
+CMD [ '/bin/bash' ]
+EXPOSE 80

@@ -1,0 +1,14 @@
+version: '3'
+services:
+  my_httpd:
+    image: httpd:latest
+    container_name: my_web
+    ports:
+      - '80:8082'
+    volumes:
+      - ./html:/usr/share/nginx/html/
+    networks:
+      - my_networks
+
+networks:
+  my_networks:

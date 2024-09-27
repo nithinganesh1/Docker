@@ -1,0 +1,18 @@
+version: '3'
+services:
+  host_my_web:
+    image: nginx
+    container_name: nginx_container
+    ports:
+      - '8080:80'
+    volumes:
+      -  ./templates:/etc/nginx/templates
+  host_my_we2:
+    image: httpd
+    container_name: httpd_container
+    ports:
+      -  '8081:80'
+    volumes:
+      -  ./htdocs/:/usr/local/apache2/htdocs
+
+      

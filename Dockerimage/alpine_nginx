@@ -1,0 +1,7 @@
+FROM alpine
+RUN apk update && apk add nginx
+COPY ./webfiles/cafe /usr/share/nginx/html/
+COPY ./webfiles/default.conf /etc/nginx/http.d/
+WORKDIR /usr/share/nginx/html/ 
+CMD [ "nginx", "-g", "daemon off;"]
+EXPOSE 80

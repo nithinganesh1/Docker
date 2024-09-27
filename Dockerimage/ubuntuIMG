@@ -1,0 +1,8 @@
+FROM ubuntu
+RUN apt update
+RUN apt install npm -y
+COPY ./webfiles/novavi /
+WORKDIR /novavi
+RUN npm install
+CMD [ "npm", "run", "dev" ]
+EXPOSE 3000

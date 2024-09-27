@@ -1,0 +1,7 @@
+services:
+  hello:
+    image: httpd
+    container_name: 'hello_httpd'
+    ports:
+      -  '80:8080'
+    
